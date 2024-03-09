@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto, Oswald } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const roboto = Roboto({ 
   subsets: ["cyrillic"],
@@ -28,13 +30,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.variable} ${oswald.variable} w-full`}>
         <div className="__next">
-          {/* Header */}
+          <Header />
           <main className="main w-full" id="main">
             <div className="w-full" id="mainPage">
               {children}
             </div>
           </main>
-          {/* Footer */}
+          <Footer />
         </div>
       </body>
     </html>
