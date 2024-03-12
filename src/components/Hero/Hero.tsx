@@ -3,7 +3,7 @@ import HeroSlider from '../HeroSlider/HeroSlider';
 
 const Hero = () => {
   return (
-    <section className='w-full' id='hero'>
+    <section className='w-full bg-hero bg-cover bg-center bg-no-repeat' id='hero'>
       <div className="container mx-auto">
         <div className="w-full">
           <HeroSlider />
