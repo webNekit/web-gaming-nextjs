@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import CustomButton from '../CustomButton/CustomButton';
 
 // styles for swiper
 import 'swiper/css';
@@ -31,6 +32,7 @@ const HeroSlider = () => {
             <div className="w-full">
               <h2 className="">{item.title}</h2>
               <p className="">{item.description}</p>
+              <CustomButton containerStyle={'w-[170px] h-[50px]'} text='Подробнее' />
             </div>
           </SwiperSlide>
         )
