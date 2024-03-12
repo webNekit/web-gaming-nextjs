@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className='w-full bg-hero bg-cover bg-center bg-no-repeat' id='hero'>
       <div className="container mx-auto">
-        <div className="w-full">
+        <div className="w-full py-16">
           <HeroSlider />
         </div>
       </div>
