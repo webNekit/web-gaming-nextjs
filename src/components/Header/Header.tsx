@@ -22,6 +22,11 @@ const Header = () => {
           <Navbar containerStyle='hidden md:flex' />
           {/* end component navbar */}
           <div className=''>
+            <ul className="flex items-center gap-4">
+              <li className="inline-flex">
+                <Link href="" className='uppercase text-white/50 hover:text-white transition-all'>Войти</Link>
+              </li>
+            </ul>
             {/* start menu bar */}
             <button onClick={() => setOpenNav(!openNav)} className='text-xl text-white w-[45px] h-[45px] flex items-center justify-center border border-zinc-500 rounded-md md:hidden'>
               <FaBars />
