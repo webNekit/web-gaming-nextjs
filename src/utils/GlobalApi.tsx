@@ -11,7 +11,10 @@ const axiosClient = axios.create({
 
 // API - запросы
 const getBenefists = () => axiosClient.get('/benefits?populate=*');
+// API - запрос на получение статьей
+const getArticles = () => axiosClient.get('/articles?populate=*');
 
 export default {
     getBenefists,
+    getArticles,
 }
