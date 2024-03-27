@@ -21,13 +21,13 @@ const Articles = () => {
                                         <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes?.image?.data.attributes?.url} alt={'Картинка записи'} width={270} height={270} className='w-full h-full object-cover' />
                                     </div>
                                     <div className="w-full flex items-center justify-between mt-6">
-                                        <span className='text-zinc-500 font-medium text-sm'>Акции</span>
-                                        <span className='text-zinc-500 font-medium text-sm'>12.03.04</span>
+                                        <span className='text-zinc-500 font-medium text-sm'>{item.attributes?.category?.data.attributes?.name}</span>
+                                        <span className='text-zinc-500 font-medium text-sm'>{item.attributes?.updatedAt.slice(0,10)}</span>
                                     </div>
                                     <Link href={'/articles/' + item.id} className='group'>
-                                        <h3 className="text-white text-2xl group-hover:text-accent transition-colors font-semibold">Название записи</h3>
+                                        <h3 className="text-white text-2xl group-hover:text-accent transition-colors font-semibold">{item.attributes?.name.length > 15 ? item.attributes?.name.slice(0,15) + '...' : item.attributes?.name }</h3>
                                     </Link>
-                                    <p className="mt-4 text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptatum optio eveniet facilis quae dolores eos, obcaecati porro qui, possimus iusto nam ea inventore harum? Rerum facere quisquam nemo sed repudiandae quod, quaerat doloremque ipsa.</p>
+                                    <p className="mt-4 text-zinc-300">{item.attributes?.smallText.length > 88 ? item.attributes?.smallText.slice(0, 88) + '...' : item.attributes?.smallText }</p>
                                 </div>
                             )
                         })}
