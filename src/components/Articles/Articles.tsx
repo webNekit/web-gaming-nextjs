@@ -24,7 +24,7 @@ const Articles = () => {
                                         <span className='text-zinc-500 font-medium text-sm'>Акции</span>
                                         <span className='text-zinc-500 font-medium text-sm'>12.03.04</span>
                                     </div>
-                                    <Link href={''} className='group'>
+                                    <Link href={'/articles/' + item.id} className='group'>
                                         <h3 className="text-white text-2xl group-hover:text-accent transition-colors font-semibold">Название записи</h3>
                                     </Link>
                                     <p className="mt-4 text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere voluptatum optio eveniet facilis quae dolores eos, obcaecati porro qui, possimus iusto nam ea inventore harum? Rerum facere quisquam nemo sed repudiandae quod, quaerat doloremque ipsa.</p>
