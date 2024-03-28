@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import useSingleArticle from '@/Hooks/useSingleArticle';
 
+
 export default function page({ params }) {
 
     const detailArticle = useSingleArticle(params.id);
