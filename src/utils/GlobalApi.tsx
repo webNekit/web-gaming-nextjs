@@ -13,8 +13,11 @@ const axiosClient = axios.create({
 const getBenefists = () => axiosClient.get('/benefits?populate=*');
 // API - запрос на получение статьей
 const getArticles = () => axiosClient.get('/articles?populate=*');
+// API - запрос на получение конкретной статьи
+const getSingleArticle = (id) => axiosClient.get('/articles/' + id + '?populate=*');
 
 export default {
     getBenefists,
     getArticles,
+    getSingleArticle
 }

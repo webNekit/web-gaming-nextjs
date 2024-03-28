@@ -17,6 +17,7 @@ const Articles = () => {
                         {articlesList.map((item, index) => {
                             return (
                                 <div className = "w-full border border-zinc-800 rounded-xl p-5" >
+                                    <img src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes?.image?.data.attributes?.url} alt="" />
                                     <div className="w-full h-[270px] overflow-hidden rounded-xl">
                                         <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes?.image?.data.attributes?.url} alt={'Картинка записи'} width={270} height={270} className='w-full h-full object-cover' />
                                     </div>
