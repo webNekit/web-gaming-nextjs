@@ -32,7 +32,7 @@ const Header = () => {
               {user ?
                 <>
                   <div className='flex items-center gap-2'>
-                    <Image src={user.picture} alt={'Изображение профиля'} width={50} height={50} className='w-[50px] h-[50px] rounded-full object-cover'/>
+                    {user.picture &&  <Link href={'/profile'}><Image src={user.picture} alt={'Изображение профиля'} width={50} height={50} className='w-[50px] h-[50px] rounded-full object-cover'/></Link>}
                     <LogoutLink className='uppercase text-white/50 hover:text-white transition-all'>Выйти</LogoutLink>
                   </div>
                 </>
