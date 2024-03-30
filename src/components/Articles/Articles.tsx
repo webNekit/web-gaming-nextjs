@@ -16,13 +16,13 @@ const Articles = () => {
                     <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
                         {articlesList.map((item, index) => {
                             return (
-                                <div className = "w-full border border-zinc-800 rounded-xl p-5" >
+                                <div key={index} className = "w-full border border-zinc-800 rounded-xl p-5" >
                                     <img src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes?.image?.data.attributes?.url} alt="" />
                                     <div className="w-full h-[270px] overflow-hidden rounded-xl">
                                         <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes?.image?.data.attributes?.url} alt={'Картинка записи'} width={270} height={270} className='w-full h-full object-cover' />
                                     </div>
                                     <div className="w-full flex items-center justify-between mt-6">
-                                        <span className='text-zinc-500 font-medium text-sm'>{item.attributes?.category?.data.attributes?.name}</span>
+                                        <Link href={'/articles/category/' + item.attributes?.category?.data.id} className='text-zinc-500 font-medium text-sm'>{item.attributes?.category?.data.attributes?.name}</Link>
                                         <span className='text-zinc-500 font-medium text-sm'>{item.attributes?.updatedAt.slice(0,10)}</span>
                                     </div>
                                     <Link href={'/articles/' + item.id} className='group'>
