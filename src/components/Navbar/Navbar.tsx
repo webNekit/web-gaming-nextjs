@@ -7,6 +7,7 @@ const menuLinks = [
   { label: 'О нас', url: '/about' },
   { label: 'Акции', url: '/sales' },
   { label: 'Каталог', url: '/catalog' },
+  { label: 'Новости', url: '/articles' },
   { label: 'Контакты', url: '/contacts' }
 ];
 

@@ -1,12 +1,10 @@
 "use client";
-import useArticles from '@/Hooks/useArticles';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const Articles = () => {
+const Articles = ({ getArticles }) => {
 
-    const articlesList = useArticles();
 
     return (
         <section className='w-full py-16'>
@@ -14,10 +12,9 @@ const Articles = () => {
                 <div className="w-full flex flex-col gap-10">
                     <h2 className="h2 text-center">Новости клуба</h2>
                     <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-                        {articlesList.map((item, index) => {
+                        {getArticles.map((item, index) => {
                             return (
                                 <div key={index} className = "w-full border border-zinc-800 rounded-xl p-5" >
-                                    <img src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes?.image?.data.attributes?.url} alt="" />
                                     <div className="w-full h-[270px] overflow-hidden rounded-xl">
                                         <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + item.attributes?.image?.data.attributes?.url} alt={'Картинка записи'} width={270} height={270} className='w-full h-full object-cover' />
                                     </div>
