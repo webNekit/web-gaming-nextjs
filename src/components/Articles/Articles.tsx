@@ -22,7 +22,7 @@ const Articles = ({ getArticles }) => {
                                         <Link href={'/articles/category/' + item.attributes?.category?.data.id} className='text-zinc-500 font-medium text-sm'>{item.attributes?.category?.data.attributes?.name}</Link>
                                         <span className='text-zinc-500 font-medium text-sm'>{item.attributes?.updatedAt.slice(0,10)}</span>
                                     </div>
-                                    <Link href={'/articles/' + item.id} className='group'>
+                                    <Link href={'/articles/' + item.attributes?.slug} className='group'>
                                         <h3 className="text-white text-2xl group-hover:text-accent transition-colors font-semibold">{item.attributes?.name.length > 15 ? item.attributes?.name.slice(0,15) + '...' : item.attributes?.name }</h3>
                                     </Link>
                                     <p className="mt-4 text-zinc-300">{item.attributes?.smallText.length > 88 ? item.attributes?.smallText.slice(0, 88) + '...' : item.attributes?.smallText }</p>
