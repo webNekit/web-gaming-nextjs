@@ -22,9 +22,12 @@ const getSingleArticle = (id) => axiosClient.get('/articles?filters[slug][$eqi]=
 // API - запрос для получения записей по категориям
 const getArticlesByCategory = (categoryId) => axiosClient.get('/articles?filters[category][id][$in]=' + categoryId + '&populate=*');
 const getPricesSection = () => axiosClient.get('/price?populate[0]=packets.image');
-
 // API - запросы на получение игры
 const getGames = () => axiosClient.get('games?sort[]=id:desc&populate=*');
+
+// ОБЩИЙ КОД ДЛЯ ИШАКОВ
+// API - запрос на отправку данных
+const createOrder = (data) => axiosClient.post('/orders', data);
 
 export default {
     getBenefists,
@@ -34,5 +37,6 @@ export default {
     getSingleArticle,
     getArticlesByCategory,
     getPricesSection,
-    getGames
+    getGames,
+    createOrder
 }
